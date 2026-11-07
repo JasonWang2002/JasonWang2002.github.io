@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jason J. Wang</title>
+  <meta name="description" content="MD-PhD student at Vanderbilt working on deep learning for protein dynamics and design in the Oliver Lab.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">Jason Wang</a>
+    <a class="link" href="#research">Research</a>
+    <a class="link" href="#projects">Projects</a>
+    <a class="link" href="#publications">Publications</a>
+    <a class="link" href="#cv">CV</a>
+    <button id="theme" type="button" aria-label="Toggle dark mode">&#9680;</button>
+  </div>
+</nav>
+
+<main id="top">
+  <div class="wrap">
+
+    <header class="hero">
+      <h1>Jason J. Wang</h1>
+      <p class="tagline">MD-PhD student at Vanderbilt University &middot; Oliver Lab, Center for AI in Protein Dynamics</p>
+      <div class="links">
+        <a class="pill" href="mailto:jason.j.wang@vanderbilt.edu">Email</a>
+        <a class="pill" href="assets/Jason_Wang_CV.pdf">Download CV</a>
+        <!-- TODO: add your own links, e.g.
+        <a class="pill" href="https://github.com/YOUR-USERNAME">GitHub</a>
+        <a class="pill" href="https://scholar.google.com/citations?user=YOUR-ID">Google Scholar</a>
+        <a class="pill" href="https://www.linkedin.com/in/YOUR-HANDLE">LinkedIn</a>
+        -->
+      </div>
+    </header>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        Hi, I'm Jason! I'm a student in Vanderbilt's Medical Scientist Training Program with a background in
+        biophysics and math. I've spent the last few years moving between wet-lab biophysics and more
+        computational, machine-learning-heavy projects, and I'm now digging into deep learning in the
+        Oliver lab.
+      </p>
+      <p>
+        Broadly, I'm interested in how modern ML can work alongside basic science to move the needle on real
+        medical problems, rather than being an end in itself. On the clinical side I'm drawn to psychiatry,
+        so I'm curious about where protein dynamics, structural biology, and neuroscience might eventually
+        meet.
+      </p>
+    </section>
+
+    <section id="research">
+      <h2>Research interests</h2>
+      <p>
+        My PhD work is aimed at <strong>designing proteins with specified dynamics that interact with
+        specified targets</strong>. Most design methods still treat proteins as rigid, single-state
+        objects, even though function often depends on how a protein moves.
+      </p>
+      <div class="tags">
+        <span class="tag">Protein dynamics</span>
+        <span class="tag">Geometric deep learning</span>
+        <span class="tag">Protein design</span>
+        <span class="tag">Graph neural networks</span>
+        <span class="tag">Biophysics</span>
+        <span class="tag">Psychiatry &amp; neuroscience</span>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="cards">
+
+        <article class="card">
+          <h3>Geometric deep learning for dynamics-aware protein design</h3>
+          <div class="meta">Oliver Lab, Vanderbilt &middot; Sep 2026&ndash;present</div>
+          <p>
+            Protein function depends on conformational dynamics, yet most design methods ignore them. This
+            project builds geometric deep learning models that describe protein dynamics as temporal changes
+            in graphs of local residue contacts. The models will be trained on a lab-curated database of
+            high-quality, structurally diverse proteins and then used in a design pipeline that proposes
+            sequences with specified dynamical behavior and target interactions.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Water placement on cyclin-dependent kinases</h3>
+          <div class="meta">Wankowicz Lab, Vanderbilt &middot; Summer 2025 rotation</div>
+          <p>Identified patterns of water molecule placement on CDKs to inform the design of more targeted inhibitors.</p>
+        </article>
+
+        <article class="card">
+          <h3>AlphaFold2 conformations for bifunctional molecule design</h3>
+          <div class="meta">Meiler Lab, Vanderbilt &middot; Summer 2024 rotation</div>
+          <p>Used modified versions of AlphaFold2 with edited inputs to produce conformations of protein-protein interactions for bifunctional molecule design.</p>
+        </article>
+
+        <article class="card">
+          <h3>Optical trapping of vesicles</h3>
+          <div class="meta">Baumgart Lab, University of Pennsylvania &middot; 2021&ndash;2024</div>
+          <p>
+            Used optical trapping to measure physical properties of vesicles. Wrote and documented the
+            LabVIEW code that runs the trap, and developed bead-tracking and particle-detection algorithms
+            for microscopy images.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Topology of the native state and protein folding rates</h3>
+          <div class="meta">NSF REU, University of Tennessee at Chattanooga &middot; Summer 2021</div>
+          <p>
+            Computed quantitative geometric and topological measures of native protein structures in Python
+            and correlated them with folding rates. This work led to my first paper (see below).
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="publications">
+      <h2>Publications &amp; talks</h2>
+
+      <h3 class="sub">Publications</h3>
+      <div class="entry">
+        <div class="when">2022</div>
+        <div>
+          <div class="title">The protein folding rate and the geometry and topology of the native state</div>
+          <div class="desc"><strong>Wang, J.</strong> and Panagiotou, E. <em>Scientific Reports</em> 12, 6384.</div>
+          <div class="desc">
+            <a href="https://doi.org/10.1038/s41598-022-09924-0">Paper</a> &middot;
+            <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9013383/">PubMed Central</a>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="sub">Talks &amp; presentations</h3>
+      <div class="entry">
+        <div class="when">Apr 2022</div>
+        <div>
+          <div class="title">Invited talk, Joint Mathematics Meetings</div>
+          <div class="desc">Undergraduate Research Activities in Mathematical and Computational Biology session.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cv">
+      <h2>CV</h2>
+      <p><a href="assets/Jason_Wang_CV.pdf">Download the full CV (PDF)</a></p>
+
+      <h3 class="sub">Education</h3>
+      <div class="entry">
+        <div class="when">2024&ndash;present</div>
+        <div>
+          <div class="title">Medical Scientist Training Program</div>
+          <div class="desc">Vanderbilt University School of Medicine</div>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="when">2021&ndash;2024</div>
+        <div>
+          <div class="title">B.A., University of Pennsylvania</div>
+          <div class="desc">Biophysics major; Chemistry and Computational Neuroscience minors. GPA 3.96 / 4.0</div>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="when">2020&ndash;2021</div>
+        <div>
+          <div class="title">Lewis Honors College, University of Kentucky</div>
+          <div class="desc">Chemistry and Biology double major; Mathematics minor. GPA 4.0 / 4.0</div>
+        </div>
+      </div>
+
+      <h3 class="sub">Research experience</h3>
+      <div class="entry">
+        <div class="when">Sep 2026&ndash;present</div>
+        <div>
+          <div class="title">Oliver Lab, Vanderbilt University</div>
+          <div class="desc">Center for AI in Protein Dynamics (CAIPD)</div>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="when">Spring 2026</div>
+        <div>
+          <div class="title">Rotation, Monteggia Lab, Vanderbilt</div>
+          <div class="desc">Neuron culture, hippocampal dissections, and whole-cell patch clamping.</div>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="when">Summer 2025</div>
+        <div>
+          <div class="title">Rotation, Wankowicz Lab, Vanderbilt</div>
+          <div class="desc">Water placement on cyclin-dependent kinases.</div>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="when">Summer 2024</div>
+        <div>
+          <div class="title">Rotation, Meiler Lab, Vanderbilt</div>
+          <div class="desc">AlphaFold2 conformations for bifunctional molecule design.</div>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="when">2021&ndash;2024</div>
+        <div>
+          <div class="title">Baumgart Lab, University of Pennsylvania</div>
+          <div class="desc">Optical trapping, instrument control, and image-analysis algorithms.</div>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="when">Summer 2021</div>
+        <div>
+          <div class="title">NSF REU, University of Tennessee at Chattanooga</div>
+          <div class="desc">Interdisciplinary computational biology; protein topology and folding.</div>
+        </div>
+      </div>
+
+      <h3 class="sub">Honors</h3>
+      <ul class="plain">
+        <li>Barry Goldwater Scholarship, 2023</li>
+      </ul>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">&copy; <span id="year">2026</span> Jason J. Wang</div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Theme toggle: follows system setting until the visitor chooses.
+  (function () {
+    var root = document.documentElement;
+    var btn = document.getElementById('theme');
+    try {
+      var saved = localStorage.getItem('theme');
+      if (saved) root.setAttribute('data-theme', saved);
+    } catch (e) {}
+    btn.addEventListener('click', function () {
+      var current = root.getAttribute('data-theme') ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      var next = current === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
+    });
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+:root {
+  --bg: #fcfcfa;
+  --fg: #1d1f23;
+  --muted: #5d636d;
+  --line: #e4e4df;
+  --card: #ffffff;
+  --accent: #1f5fbf;
+  --accent-soft: #e8f0fc;
+  --max: 760px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #14161a;
+    --fg: #e8e9ec;
+    --muted: #9aa1ac;
+    --line: #2a2e35;
+    --card: #1b1e23;
+    --accent: #7fb0ff;
+    --accent-soft: #1f2a3d;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #14161a;
+  --fg: #e8e9ec;
+  --muted: #9aa1ac;
+  --line: #2a2e35;
+  --card: #1b1e23;
+  --accent: #7fb0ff;
+  --accent-soft: #1f2a3d;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+
+/* Nav */
+nav {
+  position: sticky; top: 0; z-index: 10;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+nav .wrap { display: flex; align-items: center; gap: 4px; height: 56px; overflow-x: auto; }
+nav .brand { font-weight: 650; color: var(--fg); margin-right: auto; white-space: nowrap; }
+nav a.link { color: var(--muted); padding: 6px 10px; border-radius: 8px; font-size: 15px; white-space: nowrap; }
+nav a.link:hover { color: var(--fg); background: var(--accent-soft); text-decoration: none; }
+#theme {
+  border: 1px solid var(--line); background: transparent; color: var(--muted);
+  border-radius: 8px; padding: 5px 9px; cursor: pointer; font-size: 14px; margin-left: 6px;
+}
+#theme:hover { color: var(--fg); }
+
+/* Header */
+header.hero { padding: 72px 0 36px; }
+header.hero h1 { font-size: 2.4rem; line-height: 1.15; margin: 0 0 10px; letter-spacing: -0.02em; }
+header.hero .tagline { font-size: 1.15rem; color: var(--muted); margin: 0 0 20px; }
+.links { display: flex; flex-wrap: wrap; gap: 8px; }
+.pill {
+  display: inline-block; padding: 6px 14px; border: 1px solid var(--line);
+  border-radius: 999px; font-size: 15px; color: var(--fg); background: var(--card);
+}
+.pill:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+
+/* Sections */
+section { padding: 36px 0; border-top: 1px solid var(--line); }
+section h2 { font-size: 1.35rem; margin: 0 0 16px; letter-spacing: -0.01em; }
+p { margin: 0 0 14px; }
+.muted { color: var(--muted); }
+.small { font-size: 0.9rem; }
+
+/* Interests */
+.tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+.tag { background: var(--accent-soft); color: var(--accent); padding: 4px 12px; border-radius: 999px; font-size: 14px; }
+
+/* Cards */
+.cards { display: grid; gap: 14px; }
+.card {
+  background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px;
+}
+.card h3 { margin: 0 0 2px; font-size: 1.05rem; }
+.card .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 8px; }
+.card p:last-child { margin-bottom: 0; }
+
+/* Entries (education / experience / pubs) */
+.entry { display: grid; grid-template-columns: 1fr; gap: 2px; margin-bottom: 18px; }
+.entry:last-child { margin-bottom: 0; }
+.entry .title { font-weight: 600; }
+.entry .when { color: var(--muted); font-size: 0.9rem; }
+.entry .desc { color: var(--muted); font-size: 0.95rem; }
+@media (min-width: 640px) {
+  .entry { grid-template-columns: 150px 1fr; gap: 18px; }
+  .entry .when { padding-top: 3px; }
+}
+
+h3.sub { font-size: 1rem; color: var(--muted); font-weight: 600; margin: 26px 0 12px; text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.8rem; }
+h3.sub:first-of-type { margin-top: 0; }
+
+ul.plain { list-style: none; padding: 0; margin: 0; }
+ul.plain li { padding: 3px 0; }
+
+footer { border-top: 1px solid var(--line); padding: 28px 0 48px; color: var(--muted); font-size: 0.9rem; }
+
+@media (max-width: 520px) {
+  nav .brand { display: none; }
+  nav .wrap { justify-content: space-between; gap: 0; padding: 0 12px; }
+  nav a.link { padding: 6px 7px; font-size: 14px; }
+  header.hero { padding-top: 48px; }
+  header.hero h1 { font-size: 2rem; }
+  body { font-size: 16px; }
+}
